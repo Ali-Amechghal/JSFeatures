@@ -1,4 +1,11 @@
 /**
+
+ ======== Private data technics  =========
+@Author : Ali-Amechghal
+*/
+
+/**
+    Techinc 1 : 
 	Private Data in the Environnement constructor using , Crockford pattern
 */
 (function(){
@@ -57,3 +64,41 @@
 	stringbuilder.add(' of the world');
 	console.log(stringbuilder.toString());
 }());
+
+/**
+    Techinc 2 : 
+	Private Data using properties with reified keys
+	NB : we encapsulate the pattern in IIFE to avoid pullate the globale namespace
+*/
+
+(function(){
+	var StringBuilder = function(){
+		var KEY_BUFFEER = '_STRING_BUILDER_KEY_BUFFER';
+		function StringBulder(){
+			console.log('... StringBulder Constructor executed');
+			this[KEY_BUFFEER] = [];
+		}
+		StringBulder.prototype.add =  function(str){
+			this[KEY_BUFFEER].push(str);
+		};
+		StringBulder.prototype.toString = function(){
+			return this[KEY_BUFFEER].join('');
+		}
+		return StringBulder;
+	}();
+
+	console.log('----------------------- StringBulder  Using Reified Keys ------');
+	var strb = new StringBuilder();
+	strb.add('Hello ');
+	strb.add(' Reified Key private');
+	console.log(strb.toString());
+
+}());
+
+
+
+
+
+
+
+
