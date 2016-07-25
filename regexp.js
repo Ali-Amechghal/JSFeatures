@@ -7,6 +7,7 @@
 	//control date
 	function parseIsoDate(str_date){
 		var match =/^([0-9]{4})-([0-9]{2})-([0-9]{2})$/.exec(str_date);
+		console.log(match);
 		if(!match)
 			throw new Error('Invalide Iso Date');
 
@@ -16,4 +17,12 @@
 	}
 
 	parseIsoDate('2016-07-02');
+
+
+	var result = /^(aa|bb)$/.test('aabb');
+	console.log(result);
+	var reg = /V/;
+	console.log(reg.global);
+
+
 }());
