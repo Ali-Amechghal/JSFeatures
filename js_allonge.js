@@ -21,8 +21,5 @@ function doubleOf(num){
 	return num * 2;
 }
 
-function compose(addOne,doubleOf){
-	return function(num){
-		return addOne(doubleOf(num));
-	}
-}
+var doubleOfAddOne = compose(doubleOf,addOne);
+console.log(doubleOfAddOne(2));//6
