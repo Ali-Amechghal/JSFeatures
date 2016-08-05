@@ -23,12 +23,3 @@ console.log(x instanceof String);
 console.log(xx instanceof Object);
 
 console.log(x.length);
-
-String.prototype.toString = function(){
-	console.log(typeof this);
-	return this.valueOf();
-}
-
-var str_primitive = 'pirmitive value';
-console.log(str_primitive.toString());
-console.log(typeof str_primitive);
