@@ -23,3 +23,5 @@ console.log(x instanceof String);
 console.log(xx instanceof Object);
 
 console.log(x.length);
+
+
