@@ -1,3 +1,6 @@
+/**
+ * ignore holes while countng array elements
+ * */
 (function(){
 
 	var arr = ['a', 'b' , ,'c'];
@@ -13,4 +16,4 @@
 		return count;
 	}
 	console.log(getCount(arr));
-}());	
+}());
