@@ -1,8 +1,6 @@
 # JSFeatures
+  Javascript exampls  triks and tips 
 
-Repository with the collection of hidden javascript features
-
-(c)
-Ali-Amechghal
+(c) Ali-Amechghal
 
 
